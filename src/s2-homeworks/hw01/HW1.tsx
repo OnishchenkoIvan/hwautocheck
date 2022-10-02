@@ -35,7 +35,7 @@ export const message0: MessageType = {
     name: "Brad Pitt", // можно менять
   },
   message: {
-    text: "some textsome textsome textsome textsome textsome textsome text", // можно менять
+    text: "Hello, how are you, what did you do yesterday?", // можно менять
     time: "22:00", // можно менять
   },
 };
@@ -46,8 +46,8 @@ export const friendMessage0: MessageType = {
     name: "Angelina Jolie", // можно менять
   },
   message: {
-    text: "зеркальное сообщение для тренировки css", // можно менять
-    time: "22:00", // можно менять
+    text: "Hello, I didn't do anything and rested all day, how are you?", // можно менять
+    time: "22:01", // можно менять
   },
 };
 

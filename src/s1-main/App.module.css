@@ -3,9 +3,16 @@
 }
 
 .hw {
-
+    max-width: 1200px;
+    margin: 10px auto;
+    font-family: Montserrat, sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 .hwTitle {
-
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    padding-left: 70px;
 }
