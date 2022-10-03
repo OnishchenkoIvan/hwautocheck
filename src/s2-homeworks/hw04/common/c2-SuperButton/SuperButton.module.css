@@ -1,13 +1,21 @@
 .button {
+    width: 132px;
+    height: 30px;
+    border-radius: 3px;
+    color: red;
+    background: blue;
 }
 
 .disabled {
+
 }
 
 .secondary {
+
 }
 
 .default {
+
 }
 
 .red {
