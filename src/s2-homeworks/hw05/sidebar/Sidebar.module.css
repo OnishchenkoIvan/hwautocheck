@@ -1,4 +1,5 @@
 .sidebar {
+    display: none;
     /*display: flex;*/
     /*transition-duration: 1500ms;*/
     /*transform: translate(-280px);*/
@@ -13,6 +14,7 @@
 }
 
 .sidebar.open {
+    display: flex;
     /*transition-duration: 500ms;*/
     /*transform: translate(0px);*/
 }
