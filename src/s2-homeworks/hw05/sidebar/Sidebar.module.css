@@ -1,7 +1,7 @@
 .sidebar {
-    display: flex;
+    /*display: flex;*/
     /*transition-duration: 1500ms;*/
-    transform: translate(-280px);
+    /*transform: translate(-280px);*/
 }
 .active {
     /*font-size: 24px;*/
@@ -14,7 +14,7 @@
 
 .sidebar.open {
     /*transition-duration: 500ms;*/
-    transform: translate(0px);
+    /*transform: translate(0px);*/
 }
 
 .background {
