@@ -31,23 +31,15 @@ export const Header: FC<PropsType> = ({ handleOpen }) => {
       : "Error";
   return (
     <>
-      <AppBar position="static">
-        <Toolbar
-          style={{ justifyContent: "space-between", background: "#ffffff" }}
-        >
-          <img
-            style={{ paddingLeft: "73px" }}
-            src={burgerIcon}
-            id={"hw5-burger-menu"}
-            className={s.burgerMenuIcon}
-            onClick={handleOpen}
-            alt={"open menu"}
-          />
-          <Typography style={{ color: "#000000" }} variant="h6">
-            Hometask №5
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      <img
+        style={{ paddingLeft: "73px" }}
+        src={burgerIcon}
+        id={"hw5-burger-menu"}
+        className={s.burgerMenuIcon}
+        onClick={handleOpen}
+        alt={"open menu"}
+      />
+
       <div id={"hw5-header"} className={s.header}>
         <h1 style={{ margin: "0 auto" }}>{pageName}</h1>
       </div>
