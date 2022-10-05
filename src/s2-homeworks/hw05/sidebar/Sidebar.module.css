@@ -1,11 +1,11 @@
 .sidebar {
     display: flex;
-    transition-duration: 1500ms;
+    /*transition-duration: 1500ms;*/
     transform: translate(-280px);
 }
 .active {
-    font-size: 24px;
-    color: red;
+    /*font-size: 24px;*/
+    /*color: red;*/
 }
 .link {
     /*display: flex;*/
@@ -13,12 +13,11 @@
 }
 
 .sidebar.open {
-    transition-duration: 500ms;
+    /*transition-duration: 500ms;*/
     transform: translate(0px);
 }
 
 .background {
-    background: black;
 }
 
 .nav {
