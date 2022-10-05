@@ -3,14 +3,6 @@ import burgerIcon from "./burger.svg";
 import s from "./Header.module.css";
 import { useLocation } from "react-router-dom";
 import { PATH } from "../Pages";
-import {
-  AppBar,
-  Button,
-  IconButton,
-  Menu,
-  Toolbar,
-  Typography,
-} from "@mui/material";
 
 type PropsType = {
   handleOpen: () => void;
@@ -32,7 +24,6 @@ export const Header: FC<PropsType> = ({ handleOpen }) => {
   return (
     <>
       <img
-        style={{ paddingLeft: "73px" }}
         src={burgerIcon}
         id={"hw5-burger-menu"}
         className={s.burgerMenuIcon}
@@ -41,7 +32,7 @@ export const Header: FC<PropsType> = ({ handleOpen }) => {
       />
 
       <div id={"hw5-header"} className={s.header}>
-        <h1 style={{ margin: "0 auto" }}>{pageName}</h1>
+        <h1>{pageName}</h1>
       </div>
     </>
   );
