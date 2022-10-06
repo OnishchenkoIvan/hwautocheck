@@ -21,6 +21,7 @@
     width: 317px;
     min-height: 100vh;
     background: #FFFFFF;
+    z-index: 2;
     box-shadow: 0 10px 40px rgba(29, 33, 38, 0.13), 0 1px 2px rgba(29, 33, 38, 0.1);
 }
 
@@ -32,6 +33,7 @@
     top: 0;
     background: #000000;
     opacity: 0.3;
+    z-index: 1;
 }
 
 .nav {

@@ -31,9 +31,8 @@ export const Header: FC<PropsType> = ({ handleOpen }) => {
           onClick={handleOpen}
           alt={"open menu"}
         />
-        <span>Hometask №5</span>
+        <h1>{pageName}</h1>
       </div>
-      <h1>{pageName}</h1>
     </>
   );
 };
