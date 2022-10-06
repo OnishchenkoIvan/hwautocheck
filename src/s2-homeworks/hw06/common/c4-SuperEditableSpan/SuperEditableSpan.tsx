@@ -73,6 +73,10 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = ({
           onBlur={onBlurCallback}
           onEnter={onEnterCallback}
           className={s.input}
+          style={{
+            paddingLeft: "24px",
+            fontSize: "16px",
+          }}
           {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
         />
       ) : (
