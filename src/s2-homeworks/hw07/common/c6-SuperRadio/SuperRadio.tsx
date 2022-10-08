@@ -63,8 +63,9 @@ const SuperRadio: React.FC<SuperRadioPropsType> = ({
             id={id + "-span-" + o.id}
             {...spanProps}
             className={spanClassName}
-          ></span>
-          {o.id}
+          >
+            {o.value}
+          </span>
         </label>
       ))
     : [];
