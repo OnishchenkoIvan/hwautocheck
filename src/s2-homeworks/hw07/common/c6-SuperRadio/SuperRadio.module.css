@@ -1,15 +1,31 @@
 .radio {
+    width: 20px;
+    height: 20px;
 }
 
 .radio::before {
+
 }
 
 
 .radio:checked::before {
+
 }
 
 .label {
+    gap: 13px;
+    display: flex;
+    padding-bottom: 22px;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.label span {
+    padding-top: 2px;
 }
 
 .options {
+    border-color: red;
+
 }
