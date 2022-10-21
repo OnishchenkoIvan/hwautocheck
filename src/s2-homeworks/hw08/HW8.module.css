@@ -3,8 +3,8 @@
 }
 
 .item td {
-    padding: 16px;
     border-bottom: 1px solid #e5e5e5;
+    padding: 16px;
 }
 
 .item:last-of-type td {
@@ -34,6 +34,9 @@
 
 .thead tr td:first-of-type{
     font-weight: 600;
+    background: #e5e5e5;
+    height: 36px;
+    width: 300px;
 }
 
 .nameCol {
@@ -41,9 +44,14 @@
 }
 
 .ageCol {
-    padding-left: 100px;
+    display: block;
+    height: 36px;
+    background-color: #e5e5e5;
+    margin-left: -2px;
+    padding: 8px 0 0 100px;
     font-weight: 600;
 }
+
 
 .item td:last-of-type {
     padding: 0 205px 0 105px;
