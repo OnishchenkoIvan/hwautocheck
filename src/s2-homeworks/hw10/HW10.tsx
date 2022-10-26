@@ -42,7 +42,11 @@ const HW10 = () => {
             <Loader />
           </div>
         ) : (
-          <SuperButton id={"hw10-button-start-loading"} onClick={setLoading}>
+          <SuperButton
+            style={{ width: 150 }}
+            id={"hw10-button-start-loading"}
+            onClick={setLoading}
+          >
             Set loading...
           </SuperButton>
         )}
