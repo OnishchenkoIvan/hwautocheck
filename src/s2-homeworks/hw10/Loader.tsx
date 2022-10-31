@@ -1,3 +1,2 @@
-import s from './Loader.module.css'
-
-export const Loader = () => <div className={s.loader}/>
+import loader from "./Wedges-3s-200px.svg";
+export const Loader = () => <img src={loader} alt={"loader"} />;
