@@ -4,6 +4,8 @@
 }
 
 .responseContainer {
+    display: flex;
+    margin: 100px auto;
 }
 
 .imageContainer {
