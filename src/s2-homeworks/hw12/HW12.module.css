@@ -8,9 +8,19 @@
     --background: #DDEEFF;
 }
 
+[data-theme='2'] .select {
+    color: #000000;
+    background-color: #DDEEFF;
+}
+
 [data-theme='3'] {
     --color: #FFFFFF;
     --background: #212A34;
+}
+
+[data-theme='3'] .select {
+    color: #ffffff;
+    background-color: #212A34;
 }
 
 html {
@@ -18,6 +28,8 @@ html {
     color: var(--color);
 }
 
-.select {
-
+.span {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 20px 0 6px;
 }

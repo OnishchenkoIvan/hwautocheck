@@ -1,4 +1,6 @@
 .buttonsContainer {
+    display: flex;
+    gap: 24px;
 }
 
 .responseContainer {
@@ -19,4 +21,5 @@
 .text {
 }
 .info {
+    margin: 100px 0 0 500px;
 }

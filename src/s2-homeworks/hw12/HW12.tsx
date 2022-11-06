@@ -13,12 +13,12 @@ import { AppStoreType } from "../hw10/bll/store";
  * 4 - передать пропсы в SuperSelect
  * */
 
-type ThemesType = Array<{ id: number; value: "light" | "blue" | "dark" }>;
+type ThemesType = Array<{ id: number; value: "Default" | "Blue" | "Dark" }>;
 
 const themes: ThemesType = [
-  { id: 1, value: "light" },
-  { id: 2, value: "blue" },
-  { id: 3, value: "dark" },
+  { id: 1, value: "Default" },
+  { id: 2, value: "Blue" },
+  { id: 3, value: "Dark" },
 ];
 
 const HW12 = () => {
@@ -42,6 +42,7 @@ const HW12 = () => {
       </div>
 
       <div className={s2.hw}>
+        <span className={s.span}>Выберите тему</span>
         <SuperSelect
           id={"hw12-select-theme"}
           className={s.select}
