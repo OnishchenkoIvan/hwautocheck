@@ -132,7 +132,7 @@ const HW13 = () => {
               {text}
             </div>
             <div id={"hw13-info"} className={s.info}>
-              {info === "...loading" ? <Loader /> : ""}
+              {info === "...loading" ? <Loader /> : info}
             </div>
           </div>
         </div>
