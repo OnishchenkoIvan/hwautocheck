@@ -3,12 +3,12 @@ import s2 from "../../s1-main/App.module.css";
 import s from "./HW15.module.css";
 import axios from "axios";
 import SuperPagination from "./common/c9-SuperPagination/SuperPagination";
-import { createSearchParams, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import SuperSort from "./common/c10-SuperSort/SuperSort";
-import { log } from "util";
+import { Loader } from "../hw10/Loader";
 
 /*
- * 1 - дописать SuperPagination
+ * 1 - дописать SuperPagination - done
  * 2 - дописать SuperSort
  * 3 - проверить pureChange тестами
  * 3 - дописать sendQuery, onChangePagination, onChangeSort в HW15
@@ -44,22 +44,17 @@ const HW15 = () => {
 
   const sendQuery = (params: any) => {
     setLoading(true);
-    getTechs(params)
-      .then((res) => {
-        // делает студент
-        // сохранить пришедшие данные
-        if (res) {
-          // console.log(res.data);
-          setTechs(res.data.techs);
-          setTotalCount(res.data.totalCount);
-        }
-      })
-      .finally(() => {
-        setLoading(false);
-      });
+    getTechs(params).then((res) => {
+      if (res) {
+        setTotalCount(res.data.totalCount);
+        setTechs(res.data.techs);
+      }
+      setLoading(false);
+    });
   };
+
   const onChangePagination = (newPage: number, newCount: number) => {
-    // делает студент // setPage( // setCount( // sendQuery( // setSearchParams(
+    // делает студент
     setPage(newPage);
     setCount(newCount);
     setSearchParams({
@@ -70,6 +65,7 @@ const HW15 = () => {
   };
 
   const onChangeSort = (newSort: string) => {
+    // делает студент
     setSort(newSort);
     setPage(1);
     setSearchParams({
@@ -78,11 +74,14 @@ const HW15 = () => {
       sort: newSort,
     });
   };
+  useEffect(() => {
+    const params = Object.fromEntries(searchParams);
+    sendQuery(params);
+  }, [searchParams]);
 
   useEffect(() => {
     const params = Object.fromEntries(searchParams);
     sendQuery({ page: params.page, count: params.count });
-    // console.log(params);
     setPage(+params.page || 1);
     setCount(+params.count || 4);
   }, []);
@@ -104,36 +103,37 @@ const HW15 = () => {
       <div className={s2.hwTitle}>Homework #15</div>
 
       <div className={s2.hw}>
-        {idLoading && (
-          <div id={"hw15-loading"} className={s.loading}>
-            Loading...
-          </div>
-        )}
-
         <SuperPagination
           page={page}
           itemsCountForPage={count}
           totalCount={totalCount}
           onChange={onChangePagination}
         />
-
-        <div className={s.rowHeader}>
-          <div className={s.techHeader}>
-            tech
-            <SuperSort sort={sort} value={"tech"} onChange={onChangeSort} />
+        {idLoading ? (
+          <div id={"hw15-loading"} className={s.loading}>
+            <Loader />
           </div>
+        ) : (
+          <>
+            <div className={s.rowHeader}>
+              <div className={s.techHeader}>
+                tech
+                <SuperSort sort={sort} value={"tech"} onChange={onChangeSort} />
+              </div>
 
-          <div className={s.developerHeader}>
-            developer
-            <SuperSort
-              sort={sort}
-              value={"developer"}
-              onChange={onChangeSort}
-            />
-          </div>
-        </div>
+              <div className={s.developerHeader}>
+                developer
+                <SuperSort
+                  sort={sort}
+                  value={"developer"}
+                  onChange={onChangeSort}
+                />
+              </div>
+            </div>
 
-        {mappedTechs}
+            {mappedTechs}
+          </>
+        )}
       </div>
     </div>
   );
