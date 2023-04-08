@@ -1,7 +1,7 @@
 import React from "react";
-import arrowDown from "./img/down.svg";
-import arrowUp from "./img/up.svg";
-import arrows from "./img/none.svg";
+import arrowDown from "./downChosen.png";
+import arrowUp from "./upChosen.png";
+import arrows from "./none.png";
 
 // добавить в проект иконки и импортировать
 const downIcon = arrowDown;
