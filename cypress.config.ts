@@ -6,5 +6,13 @@ export default defineConfig({
       // implement node event listeners here
     },
     baseUrl: "https://onishchenkoivan.github.io/hwautocheck/#",
+    testIsolation: false,
+  },
+
+  component: {
+    devServer: {
+      framework: "create-react-app",
+      bundler: "webpack",
+    },
   },
 });
